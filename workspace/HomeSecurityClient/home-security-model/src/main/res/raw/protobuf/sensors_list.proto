@@ -1,0 +1,21 @@
+
+syntax = "proto3";
+
+option java_package = "com.example.lisi4ka.homesecurityclient";
+option java_outer_classname = "SensorProtos";
+
+message SensorProto {
+  optional string name = 1;
+  optional bool state = 2;
+
+  enum SensorType {
+     LOCKER = 0;
+     MOVEMENT = 1;
+     VOLUME = 2;
+     FIRE = 3;
+  }
+}
+
+message SensorListProto {
+  repeated SensorProto sensor = 1;
+}
